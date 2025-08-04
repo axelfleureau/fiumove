@@ -26,24 +26,24 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#448de2",
+          DEFAULT: "#4f6fa8",
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#1971b1",
-          foreground: "#ffffff",
+          DEFAULT: "#7dd3fc",
+          foreground: "#1e293b",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#fafafa",
-          foreground: "#9aa1bb",
+          DEFAULT: "#f8fafc",
+          foreground: "#64748b",
         },
         accent: {
-          DEFAULT: "#448de2",
-          foreground: "#ffffff",
+          DEFAULT: "#7dd3fc",
+          foreground: "#1e293b",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -53,12 +53,6 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // FIUMEDICA Custom Colors
-        "blue-accent": "#1a2649",
-        "white-2": "#fafafa",
-        paragraph: "#9aa1bb",
-        black: "#2b2b2b",
-        "midnight-blue": "#1971b1",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -86,10 +80,6 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateX(50px)" },
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -97,7 +87,6 @@ const config: Config = {
         fadeIn: "fadeIn 0.6s ease-out",
         slideInLeft: "slideInLeft 0.6s ease-out",
         slideInRight: "slideInRight 0.6s ease-out",
-        float: "float 3s ease-in-out infinite",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

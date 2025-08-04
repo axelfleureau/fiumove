@@ -2,9 +2,9 @@ import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
 import ServicesSection from "@/components/services-section"
 import TeamSection from "@/components/team-section"
-import PreventionSection from "@/components/prevention-section"
+import ApproachSection from "@/components/approach-section"
 import TestimonialsSection from "@/components/testimonials-section"
-import BookingMapSection from "@/components/booking-map-section"
+import BookingSection from "@/components/booking-section"
 import Footer from "@/components/footer"
 
 export default function HomePage() {
@@ -15,9 +15,9 @@ export default function HomePage() {
         <HeroSection />
         <ServicesSection />
         <TeamSection />
-        <PreventionSection />
+        <ApproachSection />
         <TestimonialsSection />
-        <BookingMapSection />
+        <BookingSection />
       </main>
       <Footer />
     </div>

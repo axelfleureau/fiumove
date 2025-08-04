@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Clock, Mail, FileText, MapPin, Calendar } from "lucide-react"
+import { Clock, Mail, FileText, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const scheduleData = [
@@ -79,11 +79,9 @@ export default function Footer() {
             className={`transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
             <div className="flex items-center mb-8">
-              {/* Logo Section */}
               <div className="w-20 h-20 bg-white rounded-lg p-3 mr-4 shadow-lg">
-                <img src="/images/fiumedica-logo.png" alt="FIUMEDICA Logo" className="w-full h-full object-contain" />
+                <img src="/images/fiumove-logo.png" alt="FIUMEDICA Logo" className="w-full h-full object-contain" />
               </div>
-              {/* End of Logo Section */}
             </div>
 
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
@@ -133,26 +131,13 @@ export default function Footer() {
                 Modulistica
               </Button>
             </div>
-
-            {/* New Button for Appointment Booking */}
-            <div className="mt-8">
-              <Button
-                className="bg-primary text-white hover:bg-midnight-blue font-medium px-8 py-4 rounded-lg transition-colors duration-200 text-lg"
-                onClick={() =>
-                  window.open("https://www.medgestprenotazioni.it/10022020_mgp_fiumedica/reservation.php", "_blank")
-                }
-              >
-                <Calendar className="w-5 h-5 mr-3" />
-                Prenota la tua visita
-              </Button>
-            </div>
           </div>
         </div>
 
         {/* Bottom section */}
         <div className="border-t border-white/10 mt-12 pt-8">
           <p className="text-center text-gray-400 text-sm">
-            FIUMEDICA Srl è titolare di Autorizzazione Sanitaria N.31939/P del 26/04/2023. Il Direttore Sanitario è il
+            FIUMEDICA Srl è titolare di Autorizzazione Sanitaria N.31939/P del 26/04/2018 - Direttore Sanitario è il
             Dott. Roberto Vergari Borzetti
           </p>
         </div>
