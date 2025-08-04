@@ -6,14 +6,60 @@ import { Button } from "@/components/ui/button"
 
 const teamMembers = [
   {
-    name: "Alessandro Marzotto",
-    role: "Massoterapista, esperto nella prevenzione e trattamento degli infortuni e delle patologie sportive, nella riattivazione osteo-articolare e muscolare.",
-    image: "/images/doctor-1.png",
+    name: "Dott. Sergio Battaglia",
+    specialty: "Specialista in Radiologia",
+    description:
+      "Esperto in diagnostica per immagini e radiologia interventistica, specializzato in ecografia diagnostica avanzata per una valutazione accurata e tempestiva.",
+    image: "/images/doctor-battaglia.png",
   },
   {
-    name: "Stefano Tonin",
-    role: "Fisioterapista laureato in Scienze Motorie esperto nella riabilitazione e trattamento degli infortuni, nella rieducazione funzionale e nel miglioramento delle performance sportive.",
-    image: "/images/doctor-2.png",
+    name: "Dott.ssa Cristina Millevoi",
+    specialty: "Specialista in Medicina Interna",
+    description:
+      "Specialista in medicina interna con esperienza nella diagnostica ecografica, focalizzata sulla prevenzione e diagnosi precoce delle patologie internistiche.",
+    image: "/images/doctor-millevoi.png",
+  },
+  {
+    name: "Dott.ssa Chiara Lestuzzi",
+    specialty: "Specialista in Cardiologia",
+    description:
+      "Cardiologa esperta in ecocardiografia e diagnostica cardiovascolare, specializzata nella valutazione non invasiva delle patologie cardiache.",
+    image: "/images/doctor-lestuzzi.png",
+  },
+  {
+    name: "Dott. Giuseppe Stimoli",
+    specialty: "Specialista in Ginecologia e Ostetricia",
+    description:
+      "Ginecologo ostetrico con esperienza in ecografia ginecologica e ostetrica, specializzato nel monitoraggio della gravidanza e della salute femminile.",
+    image: "/images/doctor-stimoli.png",
+  },
+  {
+    name: "Dott.ssa Moira Martinelli",
+    specialty: "Specialista in Ginecologia e Ostetricia",
+    description:
+      "Specialista in ginecologia e ostetricia con focus sulla diagnostica ecografica dell'apparato genitale femminile e controlli prenatali.",
+    image: "/images/doctor-martinelli.png",
+  },
+  {
+    name: "Dott. Giuseppe Catalano",
+    specialty: "Specialista in Urologia",
+    description:
+      "Urologo esperto in diagnostica ecografica dell'apparato genitourinario maschile, specializzato nella prevenzione e cura delle patologie urologiche.",
+    image: "/images/doctor-catalano.png",
+  },
+  {
+    name: "Dott. Adolfo Sangiorgio",
+    specialty: "Specialista in Urologia",
+    description:
+      "Specialista in urologia con competenze avanzate in ecografia testicolare e prostatica, focalizzato sulla diagnosi precoce delle patologie urologiche.",
+    image: "/images/doctor-sangiorgio.png",
+  },
+  {
+    name: "Dott. Giacomo Sabbioni",
+    specialty: "Specialista in Ortopedia e Traumatologia",
+    description:
+      "Ortopedico traumatologo esperto in ecografia muscolo-scheletrica, specializzato nella diagnosi delle patologie osteoarticolari e dei tessuti molli.",
+    image: "/images/doctor-sabbioni.png",
   },
 ]
 
@@ -22,28 +68,34 @@ export default function TeamSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1e293b] mb-4">Il nostro team di specialisti</h2>
-          <div className="w-24 h-1 bg-[#7dd3fc] mx-auto"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Il nostro team di specialisti</h2>
+          <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-[#f8fafc] rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+              className="text-center bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300"
             >
-              <div className="relative w-64 h-80 md:w-48 md:h-64 mx-auto mb-6 rounded-xl overflow-hidden">
-                <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+              <div className="relative w-64 h-80 mx-auto mb-6">
+                <Image
+                  src={member.image || "/placeholder.svg"}
+                  alt={member.name}
+                  fill
+                  className="object-cover rounded-lg"
+                />
               </div>
-              <h3 className="text-xl font-bold text-[#1e293b] mb-4">{member.name}</h3>
-              <p className="text-[#64748b] leading-relaxed text-sm">{member.role}</p>
+              <h3 className="text-xl font-bold text-black mb-2">{member.name}</h3>
+              <p className="text-primary font-medium mb-4">{member.specialty}</p>
+              <p className="text-paragraph text-sm leading-relaxed px-4">{member.description}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center">
           <Button
-            className="bg-[#4f6fa8] text-white hover:bg-[#3d5a8c] font-medium px-8 py-3 rounded-lg transition-colors duration-200"
+            className="bg-primary text-white hover:bg-midnight-blue font-medium px-8 py-3 rounded-lg transition-colors duration-200"
             onClick={() =>
               window.open("https://www.medgestprenotazioni.it/10022020_mgp_fiumedica/reservation.php", "_blank")
             }
